@@ -2,17 +2,16 @@ const vincitore = document.getElementById("win"); //Prendere id per stampare in 
 
 //aggiungere variabili
 
-const utente = (math.floot(Math.random()*5+1)); //aggiungere generatore Utente
-const pc = []; //aggiungere generatire pc
+let utente = (Math.floor(Math.random()*5+1)); //aggiungere generatore Utente
+let pc = (Math.floor(Math.random()*5+1)); //aggiungere generatire pc
 
-if(utete > pc){
-    console.log(utente);
-    vincitore.innerHTML = "utente";
-}else{
-    console.log(pc);
-    vincitore.innerHTML = "pc";
+if(utente > pc){
+    console.log(utente); //stampare il vincitore in console
+    vincitore.innerHTML = "Il vincitore è Utente con un punteggio di: " + utente; //stampare il vincitore su schermo nell'html
 }
-
-//stampare il vincitore in console
-
-//stampare il vincitore su schermo nell'html
+else if(utente < pc){
+    console.log(pc); //stampare il vincitore in console
+    vincitore.innerHTML = "Il vincitore è Pc con un punteggio di: " + pc; //stampare il vincitore su schermo nell'html
+}else if(utente = pc){
+    vincitore.innerHTML = "PAREGGIO";
+};
